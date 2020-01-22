@@ -8,32 +8,40 @@ Paste your answers into this file.
 
 ## Print every number from 0 to 10
 
-```
-ANSWER HERE
+```js
+for(let i = 0; i <= 10; i++) {
+    console.log(i);
+}
 ```
 
 <br>
 
 ## Print every number from 10 to 0
 
-```
-ANSWER HERE
+```js
+for(let i = 10; i >= 0; i--) {
+    console.log(i);
+}
 ```
 
 <br>
 
 ## Print every number from 4 to -16
 
-```
-ANSWER HERE
+```js
+for(let i = 4; i >= -16; i--) {
+    console.log(i);
+}
 ```
 
 <br>
 
 ## Print every fifth number from 8 to 41
 
-```
-ANSWER HERE
+```js
+for(let i = 8; i <= 41; i++) {
+    if(i % 5 === 0) console.log(i);
+}
 ```
 
 <br>
@@ -48,20 +56,38 @@ Paste your answers into this file.
 ```js
 const numbers = [4, 9, 7, 2, 1, 8];
 
-  // your code here
+for(let i = 0; i < numbers.length; i++) {
+    if(numbers[i] % 2 !== 0) numbers[i] *= 2; 
+}
 
 numbers; // => [4, 18, 14, 2, 2, 8]
 ```
 
 2.  Create an array to hold your favorite colors.  For each choice, log to the screen a string like: `My #1 choice is blue.`
 
+```js
+const favColors = ['blue', 'black', 'purple'];
+for(let i = 0; i < favColors.length; i++) {
+    console.log('My #' + (i + 1) + ' choice is ' + favColors[i] + '.');
+}
+```
 3.  Create an array of ages.  Loop through and log only the ages that are over 21.
-
+```js 
+const ages = [10, 21, 30, 5];
+for(let i = 0; i < ages.length; i++) {
+    if(ages[i] >= 21) console.log(ages[i]);
+}
+```
 1. Create an array to hold your top five choices of something (music, books, movies, whatever).
 
     - For each choice, log to the screen a string like: "My #1 choice is blue."
     - **Bonus:** Change it to log "My 1st choice, "My 2nd choice", "My 3rd choice", picking the right suffix for the number based on what it is.
-
+```js
+const movies = ['District 9', 'The Detour', 'movie 3', 'movie 4', 'movie 5'];
+for(let i = 0; i < movies.length; i++) {
+    console.log('My #' + (i + 1) + ' choice is ' + movies[i] + '.');
+}
+```
 
 ## The classic Fizzbuzz Program
 
@@ -74,8 +100,21 @@ If the `number` is evenly divisible by 5, print "Buzz"
 If the `number` is evenly divisible by 3 AND evenly divisible by 5, print "Fizzbuzz"
 
 
-```
-ANSWER HERE
+```js
+function fizzBuzz(num)
+{
+    let output = '';
+    output += num % 3 === 0 ? 'Fizz' : '';
+    output += num % 5 === 0 ? 'Buzz' : '';
+    return output;
+}
+
+let result; 
+for(let  i = 0; i <= 100; i++) {
+    if(result = fizzBuzz(i)) {
+        console.log(i + ' ' + result);
+    }
+}
 ```
 
 <br>
@@ -85,8 +124,11 @@ ANSWER HERE
 
 Write a for loop that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. "2 is even").
 
-```
-ANSWER HERE
+```js
+for(let i = 0; i <= 20; i++) {
+    if(i % 2 === 0) console.log(i + ' is even');
+    else console.log(i + ' is odd');
+}
 ```
 
 <br>
@@ -98,8 +140,18 @@ Write a for loop that will iterate from 0 to 10. For each iteration of the for l
 Bonus: Use a nested for loop to show the tables for every multiplier from 1 to 10 (100 results total).
 
 
-```
-ANSWER HERE
+```js
+for(let i = 0; i <= 20; i++) {
+    console.log(i + ' * 9 = ' + (i * 9));
+}
+
+//Bonus: 
+
+for(let i = 0; i <= 20; i++) {
+    for(let j = 1; j <= 10; j++) {
+        console.log(i + ' * ' + j + ' = ' + (i * j));
+    }
+}
 ```
 
 <br>
@@ -108,6 +160,11 @@ ANSWER HERE
 
 Check the results for every value from 60 to 100 - so your log should show "For 89, you got a B. For 90, you got an A.", etc.
 
-```
-ANSWER HERE
+```js
+for(let i = 60; i <= 100; i++) {
+    if(i >= 90) console.log("For " + i + ", you got a A.");
+    else if(i >= 80) console.log("For " + i + ", you got a B.");
+    else if(i >= 70) console.log("For " + i + ", you got a C.");
+    else console.log("For " + i + ", you got a D.");
+}
 ```
